@@ -1,6 +1,6 @@
 # How to use it?
 ```
-pod lib create SPRxAnimated --template-url=https://github.com/PQKit/pod-template
+pod lib create #name# --template-url=https://github.com/PQKit/pod-template
 ```
 
 

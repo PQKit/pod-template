@@ -1,3 +1,9 @@
+# How to use it?
+```
+pod lib create #name# --template-url=https://github.com/PQKit/pod-template
+```
+
+
 pod-template
 ============
 

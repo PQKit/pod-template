@@ -96,21 +96,12 @@ RUBY
       File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
-          oriFiles = Dir[project_folder + "/PROJECT/*"]
-          oriFiles.each do |file|
-              puts "original file is " + file
-              puts ""
-              before = file
-              next unless File.exist? before
-              after = file.gsub("CPD", prefix)
-              puts "rename file is " + after
-              puts ""
         # change app file prefixes
-        # ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
-        #   before = project_folder + "/PROJECT/" + file
-        #   next unless File.exists? before
-        #
-        #   after = project_folder + "/PROJECT/" + file.gsub("CPD", prefix)
+        ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
+          before = project_folder + "/PROJECT/" + file
+          next unless File.exists? before
+
+          after = project_folder + "/PROJECT/" + file.gsub("CPD", prefix)
           File.rename before, after
         end
 

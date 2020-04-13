@@ -1,4 +1,21 @@
+
+
+# 介绍
+
+一个编译版本为Swift 5.0 最低支持版本为9.0，并使用MVVM结构的pod模板
+
+```ruby
+	s.ios.deployment_target = '9.0'
+  
+  s.xcconfig = {'ENABLE_BITCODE' => 'NO'}
+  s.static_framework = true
+  s.swift_version = '5.0'	
+```
+
+
+
 # How to use it?
+
 ```
 pod lib create #name# --template-url=https://github.com/PQKit/pod-template
 ```
